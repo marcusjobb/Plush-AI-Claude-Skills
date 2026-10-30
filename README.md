@@ -1,6 +1,6 @@
 # Plush AI Claude Skills
 
-> **Author:** [Marcus Ackre Medina](https://marcusmedina.pro) — AI & programming teacher  
+> **Author:** [Marcus Ackre Medina](https://www.linkedin.com/in/marcusmedina/) — AI & programming teacher  
 > Created during the AI course at Plushögskolan, together with students.
 
 A small collection of AI assistant skills — prompts, hooks, and scripts — built to make
