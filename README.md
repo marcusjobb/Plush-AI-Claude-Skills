@@ -73,7 +73,10 @@ no tool-specific syntax required.
 Keeps a living development logbook in `~/Documents/journal/YYYY-MM.md`.
 
 - Triggers automatically at the end of productive sessions
-- Interactive mode with `/journal ask me` for reflective prompts
+- `/journal` — ask what to log, then appends it
+- `/journal ask me` or `/journal interview` — 3–5 reflective questions, synthesised into an entry
+- `/journal show` / `/journal today` / `/journal week` — read recent entries
+- `/journal search <term>` — search across all journal files
 - Entries are local markdown — nothing is transmitted anywhere
 - Cross-platform: works on Linux, macOS, Windows (Python 3.8+)
 
