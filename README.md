@@ -119,8 +119,26 @@ See [`opencode/codecheck/codecheck.md`](opencode/codecheck/codecheck.md) for the
 
 ## Hooks
 
-`hooks/journal-reminder.sh` — a `UserPromptSubmit` hook that nudges the AI to offer
-`/journal ask me` every 20 minutes. Linux/macOS only. Requires `jq`.
+| File | Type | What it does |
+|------|------|-------------|
+| `hooks/journal-reminder.sh` | Claude Code `UserPromptSubmit` | Nudges the AI to offer `/journal ask me` every 20 minutes |
+| `hooks/post-commit.sh` | Git `post-commit` | Logs each commit message to the journal automatically |
+
+Both hooks require Linux or macOS. `journal-reminder.sh` also requires `jq`.
+
+### Installing the git post-commit hook
+
+Git hooks live inside `.git/hooks/` and are **not** tracked by git — you need to install
+the hook manually in each repo where you want it.
+
+```bash
+cp hooks/post-commit.sh /path/to/your/repo/.git/hooks/post-commit
+chmod +x /path/to/your/repo/.git/hooks/post-commit
+```
+
+Then update `JOURNAL_SCRIPT` inside the file to match where you placed `journal.py`.
+
+After that, every commit in that repo automatically adds a line to your journal.
 
 ---
 
